@@ -1,0 +1,27 @@
+This is the host machine object (The machine info for the machine that runs the script will be stored here)
+
+$hostInfo = @{
+    Host = ''
+    IPv4 = ''
+    Subnet = ''
+    Gateway = ''
+}
+
+This is the data for the Ping/Tracert.
+All relevant data is stored in this object, including packet attempts and trace hops
+
+$pingData = @{
+        Server = ''
+        Alias = ''
+        IP = ''
+        Bytes = @()
+        Time = @()
+        TTL = @()
+        NumSent = 0
+        NumReceived = 0
+        NumLost = 0
+        MinTime = 0
+        MaxTime = 0
+        AvgTime = 0
+        Hops = @(@{IP=HopIP, Times=@()})
+    }
